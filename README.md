@@ -22,10 +22,21 @@ A micro-service for extract main content from url.
 
 ### API
 
-1. Extract `http://localhost:8080/extract?url={url}`
+1. GET Extract `http://localhost:8080/extract?url={url}`
 
 	```
 	$ curl -i -X GET http://localhost:8080/extract\?url\=https://medium.com/@benjaminhardy/8-things-every-person-should-do-before-8-a-m-cc0233e15c8d
+	```
+2. POST Extract `http://localhost:8080/extract`
+python示例代码
+	```python
+	import requests
+	url = "https://www.baidu.com"
+	r = requests.get(url)
+	payload = {"content": r.content}
+	r_e = requests.post("http://localhost:8080/extract", data=payload)
+	json_str = r_e.content
+	print json_str
 	```
 
 ### Build Docker Image

@@ -9,4 +9,6 @@ import edu.nwnu.ququzone.extractor.result.Result;
  */
 public interface Extractor {
     Result extract(String url);
+
+    Result extractPost(String text);
 }

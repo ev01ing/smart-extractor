@@ -44,6 +44,10 @@ public class ExtractorConfiguration {
         return tpl;
     }
 
+    @RequestMapping(value = "/extract", method = RequestMethod.POST)
+    public Result extractPost(@RequestParam("content") String content) {
+        return extractor.extractPost(content);
+    }
 
     @RequestMapping(value = "/extract", method = RequestMethod.GET)
     public Result extract(@RequestParam String url) {
