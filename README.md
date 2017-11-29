@@ -1,5 +1,7 @@
 html smart extractor
 ====================
+#### 更新日志
+- 在原作者的基础上增加了一个post接口，直接传入网页内容，具体开API的2
 
 ### Introduction
 
